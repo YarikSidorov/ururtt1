@@ -1,0 +1,32 @@
+﻿<Page x:Class="ururtt.Sobes1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ururtt"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Салон красоты" Height="600" Width="800">
+    <Grid Background="#F16C97">
+        <Border MinWidth="550" Margin="50" Background="White" VerticalAlignment="Center" Padding="30" MaxHeight="400" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="40" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Собеседование" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
+
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Right" Click="Button_Click1" Content="Назад"></Button>
+                </Grid>
+                <TextBox Text="{Binding Name}" x:Name="Login" materialDesign:HintAssist.Hint="Введите имя" ></TextBox>
+                <TextBox Text="{Binding Fam}" x:Name="Login2" materialDesign:HintAssist.Hint="Введите фамилию" ></TextBox>
+                <TextBox Text="{Binding Adress}" x:Name="Login3" materialDesign:HintAssist.Hint="Введите адрес" ></TextBox>
+                <TextBox Text="{Binding Phone}" x:Name="Login4" materialDesign:HintAssist.Hint="Введите телефон" ></TextBox>
+                <TextBox Text="{Binding Prof}" x:Name="Login5" materialDesign:HintAssist.Hint="Введите профессию" ></TextBox>
+
+                <Button Content="Записаться" Margin="0 20" Click="Button_Click2"></Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
